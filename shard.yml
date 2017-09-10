@@ -1,0 +1,19 @@
+name: eve_online
+version: 0.1.0
+
+authors:
+  - Igor Zubkov <igor.zubkov@gmail.com>
+
+# description: |
+#   Short description of eve_online-cr
+
+# dependencies:
+#   pg:
+#     github: will/crystal-pg
+#     version: "~> 0.5"
+
+# development_dependencies:
+#   webmock:
+#     github: manastech/webmock.cr
+
+license: MIT
