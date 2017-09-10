@@ -16,4 +16,8 @@ authors:
 #   webmock:
 #     github: manastech/webmock.cr
 
+targets:
+  eve_online:
+    main: src/cli.cr
+
 license: MIT
