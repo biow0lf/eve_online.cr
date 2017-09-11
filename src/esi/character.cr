@@ -5,6 +5,8 @@ module EveOnline
 
       API_ENDPOINT = "https://esi.tech.ccp.is/v4/characters/%s/?datasource=tranquility"
 
+      # API_ENDPOINT = "https://esi.tech.ccp.is/dev/characters/%s/?datasource=tranquility"
+
       def initialize(character_id)
         super()
         @character_id = character_id
@@ -26,7 +28,7 @@ module EveOnline
       end
 
       def corporation_id
-        response["corporation_id"]
+        response["corporation_id"]?
       end
 
       def birthday
