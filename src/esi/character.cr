@@ -13,7 +13,7 @@ module EveOnline
       def as_json
         {
           corporation_id: corporation_id,
-          # birthday: birthday,
+          birthday: birthday,
           name: name,
           gender: gender,
           race_id: race_id,
@@ -29,11 +29,11 @@ module EveOnline
         response["corporation_id"]
       end
 
-      # def birthday
-      #   birthday = response["birthday"]
-      #
-      #   Time.parse(birthday, kind = Time::Kind::Local) if birthday
-      # end
+      def birthday
+        birthday = response["birthday"]?
+
+        Time.parse(birthday.to_s, "%FT%X%z") if birthday
+      end
 
       def name
         response["name"]?
