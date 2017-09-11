@@ -6,6 +6,7 @@ module EveOnline
     class Base
       @token : String?
       @content : String?
+      @response : JSON::Any?
 
       def initialize(@token = nil)
         @parser = JSON
@@ -28,7 +29,7 @@ module EveOnline
       end
 
       def response
-        @parser.parse(content)
+        @response ||= @parser.parse(content)
       end
     end
   end
